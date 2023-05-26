@@ -29,7 +29,7 @@ if submit and user_input:
             model='gpt-3.5-turbo',
             # model='gpt-4', 
             messages=gpt_prompt,
-            temperature = 0.8
+            # temperature = 0.8
             )
 
     # 응답 내용을 화면에 출력
@@ -44,9 +44,9 @@ if submit and user_input:
         )
         st.image(dalle_response['data'][0]['url'])
 
-    # 사용한 토큰 수 계산하여 사이드바에 출력
-    total_tokens = gpt_response['usage']['total_tokens']
-    if 'token_history' not in st.session_state:
-        st.session_state['token_history'] = ''
-    st.session_state['token_history'] += f"{total_tokens} tokens are used.\n\n"
-    st.sidebar.markdown(st.session_state['token_history'])
+    # # 사용한 토큰 수 계산하여 사이드바에 출력
+    # total_tokens = gpt_response['usage']['total_tokens']
+    # if 'token_history' not in st.session_state:
+    #     st.session_state['token_history'] = ''
+    # st.session_state['token_history'] += f"{total_tokens} tokens are used.\n\n"
+    # st.sidebar.markdown(st.session_state['token_history'])
