@@ -42,7 +42,6 @@ if submit and user_input:
             prompt = prompt,
             size = size
         )
-
         st.image(dalle_response['data'][0]['url'])
 
     # 사용한 토큰 수 계산하여 사이드바에 출력
